@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Store, select } from '@ngrx/store';
 
 @Component({
   selector: 'app-dashboard-grid',
   templateUrl: './dashboard-grid.component.html',
   styleUrls: ['./dashboard-grid.component.scss']
 })
-export class DashboardGridComponent {
+export class DashboardGridComponent implements OnInit {
   /** Based on the screen size, switch from standard to one column per row */
   cards$ = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -29,7 +30,11 @@ export class DashboardGridComponent {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver, private store: Store) { }
+
+  ngOnInit(): void {
+    // this.store.pipe(select());
+  }
 
   // TODO : Widgets for Donut Chart, Load Count by Queue, Load Assignment Table
 }

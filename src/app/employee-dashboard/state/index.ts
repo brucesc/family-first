@@ -10,6 +10,8 @@ import * as fromDashboardWidgets from './dashboard-widgets/dashboard-widgets.red
 
 export const employeeDashboardFeatureKey = 'employeeDashboard';
 
+export const employeeDashboardFeatureState = createFeatureSelector<State>(employeeDashboardFeatureKey);
+
 export interface State {
 
   [fromDashboardWidgets.dashboardWidgetsesFeatureKey]: fromDashboardWidgets.State;
