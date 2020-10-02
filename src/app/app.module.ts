@@ -20,11 +20,14 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { InsightsExpansionComponent } from './insights-expansion/insights-expansion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    InsightsExpansionComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,10 +14,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DynamicWidgetLoaderDirective } from './widgets/dynamic-widget-loader.directive';
 
-// import { LoadAssignmentTableModule } from "./widgets/load-assignment-table/load-assignment-table.module";
-// import { LoadCountByQueueModule } from "./widgets/load-count-by-queue/load-count-by-queue.module";
-// import { TotalLoadCountModule } from "./widgets/total-load-count/total-load-count.module";
-
 @NgModule({
   declarations: [
     EmployeeDashboardComponent,
@@ -38,10 +34,6 @@ import { DynamicWidgetLoaderDirective } from './widgets/dynamic-widget-loader.di
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-
-    // LoadAssignmentTableModule,
-    // LoadCountByQueueModule,
-    // TotalLoadCountModule,
   ]
 })
 export class EmployeeDashboardModule { }
